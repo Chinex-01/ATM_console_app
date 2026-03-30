@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ATM console app": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
