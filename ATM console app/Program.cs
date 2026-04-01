@@ -165,6 +165,7 @@ namespace nonso
                 if (answerr == "no")
                 {
                     Console.WriteLine("Thank you for banking with us ");
+                    Console.WriteLine("Have a nice day!!");
                     break; 
                 }
                
