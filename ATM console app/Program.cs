@@ -55,6 +55,7 @@ namespace nonso
                 int checkbalance = 2;
                 int withdraw = 3;
                 int changepin = 4;
+                int phonenumeber = 5;
                 int choice;
 
                 Console.WriteLine(" Which service do you want ");
@@ -62,6 +63,8 @@ namespace nonso
                 Console.WriteLine(2 + " check balance");
                 Console.WriteLine(3 + " Withdraw ");
                 Console.WriteLine(4 + " change pin");
+                Console.WriteLine(5 + " update phone number");
+
                 choice = Convert.ToInt32(Console.ReadLine());
                 if (choice == deposit) // Deposit (only accepts 1000 naira notes)
                 {
@@ -128,6 +131,28 @@ namespace nonso
                     } while (newPin != newPin2);
                     string currentPin = newPin;
                     Console.WriteLine(" success, New PIN: " + newPin);
+                }
+                else if (choice == phonenumeber)
+                {
+                    Console.WriteLine("Enter your old number: ");
+                    string oldnum = Console.ReadLine();
+
+                    Console.WriteLine("Enter your new number: ");
+                    string newnum = Console.ReadLine();
+                 
+                    Console.WriteLine("Re-enter your new number: ");
+                    string newnum1 = Console.ReadLine();
+
+                    Console.WriteLine( " ");
+
+                    if (newnum == newnum1)
+                    {
+                        Console.WriteLine(" your change was sucessfully ");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Both don't match ");
+                    }
                 }
                 else
                 {
