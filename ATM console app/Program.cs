@@ -96,6 +96,7 @@ namespace nonso
                     {
                         Console.WriteLine("Thank you for banking with us ");
                         Console.WriteLine("Have a nice day!!");
+                    Console.WriteLine("hfggu");
                         break;
                     }
                 }
