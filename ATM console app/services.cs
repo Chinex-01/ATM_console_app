@@ -10,8 +10,10 @@ namespace ATM_console_app
         {
             bool yes = true;
             bool no = false;
-          
 
+            double balance = 0.00;
+            while (yes)
+            {
                 int deposit = 1;
                 int checkbalance = 2;
                 int withdraw = 3;
@@ -26,8 +28,8 @@ namespace ATM_console_app
                 Console.WriteLine(4 + " change pin");
                 Console.WriteLine(5 + " update phone number");
                 choice = Convert.ToInt32(Console.ReadLine());
-                double balance = 0.00;
-            if (choice == deposit) // Deposit (only accepts 1000 naira notes)
+
+                if (choice == deposit) // Deposit (only accepts 1000 naira notes)
                 {
                     do
                     {
@@ -121,6 +123,14 @@ namespace ATM_console_app
                     Console.WriteLine("Invalid number, Enter number from (1 - 4)");
                 }
                 Console.Write("Do you want to do another service us (yes/no): ");
+                string answerr = Console.ReadLine();
+                if (answerr == "no")
+                {
+                    Console.WriteLine("Thank you for banking with us ");
+                    Console.WriteLine("Have a nice day!!");
+                    break;
+                }
+            }
         }
     }
 }
