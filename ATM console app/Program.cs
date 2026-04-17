@@ -77,7 +77,7 @@ else if (answer == 2)
     Console.Write("Please create a pin: ");
     int password = Convert.ToInt32(Console.ReadLine());
 
-    Console.WriteLine($"Your details: {Name}, {Email}, {phoneNumber}, {password}, {bvn}");
+   
 
     string AccountNumber = GenerateAccountNumber.NewAccountNumber();
     Console.WriteLine();
@@ -87,13 +87,19 @@ else if (answer == 2)
     Console.WriteLine();
     Console.WriteLine("Registration successful!");
     Console.WriteLine( );
- 
+    Customer newCustomer = new Customer
+    {
+        Name = Name,
+        Email = Email,
+        Pin = password,
+        AccountNumber = AccountNumber
+    };
+    InternalStoragee.Add(newCustomer);
 }
 else
 {
     Console.WriteLine("you entered a wrong input, restart and enter 1 or 2.");
     return;
-
 }
 Console.WriteLine();
 Services.Service();
