@@ -13,10 +13,7 @@ namespace ATM_console_app
             Console.WriteLine(" It's advisable for you to deposit after opening an account ");
             Console.WriteLine(" Do you want to deposit (yes / no )");
             var answr = Console.ReadLine();
-
-           string yes  ;
-           string no ;
-            if (answr == yes)
+            if (answr?.ToLower() == "yes")
             {
                 do
                 {
@@ -32,18 +29,35 @@ namespace ATM_console_app
                     {
                         Console.WriteLine(" invalid amount (must be in 1000 notes)");
                     }
+                    Console.Write(" Do you want to do another service us (yes/no): ");
+                    string answerr = Console.ReadLine();
+                    if (answerr == "no")
+                    {
+                        Console.WriteLine(" Thank you for banking with us ");
+                        Console.WriteLine(" Have a nice day!!");
+                        break;
+                    }
+                    else
+                    {
+                        Services.Service();
+                    }
                     break;
-                } while (answr == yes);
+                } while (answr == "yes");
             }
-            else
+            else if ( answr == "no")
             {
                 do
                 {
                     Console.WriteLine(" alright. Noted!! ");
                     Services.Service();
                     break;
-                } while (answr == no);
+                } while (answr == "no");
             }
+            else
+            {
+                Console.WriteLine(" Have a nive day!! ");
+            }
+            return;
         }
     }
 }

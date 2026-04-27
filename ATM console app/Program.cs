@@ -43,6 +43,7 @@ if (answer == 1)
         if (Custoomer.Pin == password)
         {
             Console.WriteLine(" Login successful");
+            Services.Service();
         }
         else
         {
@@ -101,4 +102,3 @@ else
     return;
 }
 Console.WriteLine();
-Services.Service();
