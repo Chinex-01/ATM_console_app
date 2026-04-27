@@ -131,6 +131,7 @@ namespace ATM_console_app
                     Console.WriteLine(" Have a nice day!!");
                     break;
                 }
+                break;
             }
         }
     }
