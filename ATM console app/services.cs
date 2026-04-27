@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ATM_console_app;
 
 namespace ATM_console_app
 {
@@ -10,8 +11,8 @@ namespace ATM_console_app
         {
             bool yes = true;
             bool no = false;
-
             double balance = 0.00;
+           
             while (yes)
             {
                 int deposit = 1;
@@ -86,7 +87,7 @@ namespace ATM_console_app
                     string newPin2;
                     do
                     {
-                        Console.Write("Enter new PIN: ");
+                        Console.Write("mEnter new PIN: ");
                         newPin = Console.ReadLine();
                         Console.Write("Retype new PIN: ");
                         newPin2 = Console.ReadLine();
@@ -97,13 +98,13 @@ namespace ATM_console_app
                 }
                 else if (choice == phonenumeber)
                 {
-                    Console.Write("Enter your old number: ");
+                    Console.Write(" Enter your old number: ");
                     string oldnum = Console.ReadLine();
 
-                    Console.Write("Enter your new number: ");
+                    Console.Write(" Enter your new number: ");
                     string newnum = Console.ReadLine();
 
-                    Console.Write("Re-enter your new number: ");
+                    Console.Write(" Re-enter your new number: ");
                     string newnum1 = Console.ReadLine();
 
                     Console.WriteLine(" ");
@@ -114,20 +115,20 @@ namespace ATM_console_app
                     }
                     else
                     {
-                        Console.WriteLine("Both don't match");
-                        Console.WriteLine("it wasnt updated");
+                        Console.WriteLine(" Both don't match");
+                        Console.WriteLine(" it wasnt updated");
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Invalid number, Enter number from (1 - 4)");
+                    Console.WriteLine(" Invalid number, Enter number from (1 - 4)");
                 }
-                Console.Write("Do you want to do another service us (yes/no): ");
+                Console.Write(" Do you want to do another service us (yes/no): ");
                 string answerr = Console.ReadLine();
                 if (answerr == "no")
                 {
-                    Console.WriteLine("Thank you for banking with us ");
-                    Console.WriteLine("Have a nice day!!");
+                    Console.WriteLine(" Thank you for banking with us ");
+                    Console.WriteLine(" Have a nice day!!");
                     break;
                 }
             }

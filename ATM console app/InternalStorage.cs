@@ -6,11 +6,11 @@ namespace ATM_console_app
 {
     public class InternalStoragee
     {
-        public List<Customer> ? Storage { get; set; } = new List<Customer>();
+        private static List<Customer> Storage { get; set; } = new List<Customer>();
 
         public static void Add(Customer customer)
         {
-            InternalStoragee.Add(customer);
+            Storage.Add(customer);
         }
     }
 }
