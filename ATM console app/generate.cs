@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace ATM_console_app
 {
     public static class GenerateAccountNumber
@@ -12,7 +13,6 @@ namespace ATM_console_app
             const string numberStatic = "230111";
             Random rand = new Random();
             string accId = ""; 
-
             for (int i = 0; i < 4; i++ )
             {
                 int randNumber = rand.Next(0, 9);
